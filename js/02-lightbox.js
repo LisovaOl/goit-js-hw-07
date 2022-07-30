@@ -27,4 +27,17 @@ const lightbox = new SimpleLightbox(".gallery a", {
   captionPosition: "bottom",
   captionsData: "alt",
   captionDelay: 250,
+  enableKeyboard: true,
+  // spinner: true,
+  // navText: ['prev', 'next'],
+  close: false,
+  // alertError: true,
+  // alertErrorMessage: "Зображення не знайдено, буде завантажено наступне зображення",
+  fadeSpeed: 300,
 });
+
+// lightbox.on("show.simplelightbox", function (e) {
+
+//     console.log(e.target);
+
+// });
