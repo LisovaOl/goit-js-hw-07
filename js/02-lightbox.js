@@ -16,7 +16,6 @@ function createImgMarkup(galleryItems) {
     <img
       class = "gallery__image"
       src = "${preview}"
-      data-source = "${original}"
       alt = "${description}"
     />
   </a>`;
@@ -29,4 +28,3 @@ const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
 });
-
