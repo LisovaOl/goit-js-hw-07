@@ -1,4 +1,4 @@
-import { galleryItems } from './gallery-items.js';
+import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
 console.log(galleryItems);
@@ -12,18 +12,21 @@ function createImgMarkup(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
       return `
-  <a class="gallery__item" href="${original}">
+  <a class = "gallery__item" href = "${original}">
     <img
-      class="gallery__image"
-      src="${preview}"
-      data-source="${original}"
-      alt="${description}"
+      class = "gallery__image"
+      src = "${preview}"
+      data-source = "${original}"
+      alt = "${description}"
     />
   </a>`;
     })
     .join("");
 }
 
-{/* <a class="gallery__item" href="large-image.jpg">
-  <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-</a>; */}
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionPosition: "bottom",
+  captionsData: "alt",
+  captionDelay: 250,
+});
+
